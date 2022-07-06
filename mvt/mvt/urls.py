@@ -22,9 +22,3 @@ urlpatterns = [
     path('hello/', views.welcome),
     path('show-relatives/',views.listRelatives)
 ]
-
-#from django.urls import path, include
-# urlpatterns = [
-#     path('', include('familia.urls')),
-#     path('admin/', admin.site.urls),
-# ]

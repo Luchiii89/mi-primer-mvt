@@ -10,13 +10,9 @@ def welcome(request):
 	return HttpResponse("Hola Bienvenido a mi primer MVT")
 
 
-# def mostrar_mi_template(request):
-#     return render(request,"family/index.html")
-#mi-primer-mvt\mvt\family\templates\family\index.html
-
-
 def listRelatives(request):
     context = {
         "relatives" : Relative.objects.all(),
     }
     return render(request,"family/relatives.html",context)
+

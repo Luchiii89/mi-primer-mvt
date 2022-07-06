@@ -12,19 +12,21 @@
 
     <ul>
         {% for relative in relatives %}
-            <br><li>
-                 Nombre:  {{relative.name}} {{relative.surname}},
-                Edad: {{relative.age}},
-                Dirección: {{relative.address}},
-                Teléfono: {{relative.celNum}},
-                Correo electrónico: {{relative.email}},
-                Fecha de nacimiento: {{relative.birthDayDate}},
+            <br>
+            <li>
+                <b>Nombre:</b> {{relative.name}} {{relative.surname}},
+                <b>Fecha de nacimiento:</b> {{relative.birthDayDate}},
+                <b>Edad:</b> {{relative.age}} años,
+                <b>Dirección:</b> {{relative.address}},
+                <b>Teléfono:</b> {{relative.celNum}},
+                <b>Email:</b> {{relative.email}},
                 {% if relative.hasEmigrated %}
-                    ¿Vive en Argentina?: No
+                    <b>¿Vive en Argentina?:</b> No
                 {% else %}
-                    ¿Vive en Argentina?: Si 
+                    <b>¿Vive en Argentina?:</b> Si 
                 {% endif %}
-            </li></br>
+            </li>
+            </br>
         {% endfor %}
     </ul>
 
